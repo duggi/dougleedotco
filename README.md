@@ -1,3 +1,25 @@
+----
+----
+----
+
+```
+  ___                _            ___      _    ___
+ |   \ ___ _  _ __ _| |   ___ ___|   \ ___| |_ / __|___
+ | |) / _ \ || / _` | |__/ -_) -_) |) / _ \  _| (__/ _ \
+ |___/\___/\_,_\__, |____\___\___|___/\___/\__|\___\___/
+               |___/
+
+The webapp deployed to douglee.co
+- Create React App
+- Supabase
+- Netlify
+```
+
+----
+----
+----
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
