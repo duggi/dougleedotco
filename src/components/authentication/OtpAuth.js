@@ -39,7 +39,9 @@ export default function OtpAuth() {
         </div>
         <div>
           <button disabled={loading}>
-            {loading ? <span>Loading</span> : <span>Send magic link</span>}
+            {loading
+              ? <span>Loading</span>
+              : <span>Send magic link</span>}
           </button>
         </div>
       </form>

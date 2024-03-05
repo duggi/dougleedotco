@@ -25,11 +25,11 @@ export default function GitHubAuth() {
 
 
   return (
-    <>
+    <div>
       <p>Sign in with GitHub</p>
-      <div>
-        <button onClick={handleLogin} disabled={loading}>Login with GitHub</button>
-      </div>
-    </>
+      <button onClick={handleLogin} disabled={loading}>
+        Login with GitHub
+      </button>
+    </div>
   )
 }
