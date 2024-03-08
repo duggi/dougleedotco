@@ -73,7 +73,7 @@ export default function Profile({ session }) {
 
 
   return (
-    <>
+    <div">
       <form onSubmit={updateProfile}>
         <div>
           <label htmlFor="email">Email</label>
@@ -136,6 +136,6 @@ export default function Profile({ session }) {
           updateProfile(event, url);
         }}
       />
-    </>
+    </div>
   )
 }
