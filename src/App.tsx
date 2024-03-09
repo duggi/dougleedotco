@@ -1,35 +1,37 @@
-import 'App.css';
-import { useState, useEffect } from 'react';
-import { supabase } from 'lib/supabaseClient';
-import OtpAuth from 'components/authentication/OtpAuth'
-import GitHubAuth from 'components/authentication/GitHubAuth'
-import Profile from 'components/account/Profile'
+import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
+
+import Home from 'pages/Home';
+import About from 'pages/About';
+import Auth from 'pages/Auth';
+
+import Top from 'components/shared/Top';
+import Footer from 'components/shared/Footer';
 
 
 
-export default function App() {
-  const [session, setSession] = useState(null);
-
-  useEffect(() => {
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      setSession(session);
-    });
-
-    supabase.auth.onAuthStateChange((event, session) => {
-      setSession(session);
-    });
-  }, []);
-
-
-
+function App() {
   return (
-    <div>
-      {!session
-        ? <div>
-            <OtpAuth />
-            <GitHubAuth />
-          </div>
-        : <Profile key={session.user.id} session={session} />}
+    <div id="app">
+      <BrowserRouter>
+        <Top />
+        <hr/>
+        <div id="content">
+          <Routes>
+            <Route path="/" element={ <Home /> } />
+            <Route path="/about" element={ <About /> } />
+            <Route path="/auth" element={ <Auth /> } />
+          </Routes>
+        </div>
+        <hr />
+        <Footer />
+      </BrowserRouter>
     </div>
   )
 }
+
+
+
+export default App;
