@@ -1,13 +1,12 @@
-import 'App.css';
 import { useState, useEffect } from 'react';
 import { supabase } from 'lib/supabaseClient';
-import OtpAuth from 'components/authentication/OtpAuth'
-import GitHubAuth from 'components/authentication/GitHubAuth'
-import Profile from 'components/account/Profile'
+import OtpAuth from 'components/authentication/OtpAuth';
+import GitHubAuth from 'components/authentication/GitHubAuth';
+import Profile from 'components/account/Profile';
 
 
 
-export default function App() {
+function Auth() {
   const [session, setSession] = useState(null);
 
   useEffect(() => {
@@ -33,3 +32,7 @@ export default function App() {
     </div>
   )
 }
+
+
+
+export default Auth;
