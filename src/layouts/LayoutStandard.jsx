@@ -5,6 +5,7 @@ import Footer from 'components/shared/Footer';
 
 
 
+
 const LayoutStandard = () => {
   return (
     <div>
