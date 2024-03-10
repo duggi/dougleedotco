@@ -7,8 +7,9 @@ import Home from 'pages/Home';
 import About from 'pages/About';
 import Auth from 'pages/Auth';
 
-import Top from 'components/shared/Top';
-import Footer from 'components/shared/Footer';
+import LayoutStandard from 'layouts/LayoutStandard';
+import LayoutSimple from 'layouts/LayoutSimple';
+
 
 
 
@@ -16,17 +17,17 @@ function App() {
   return (
     <div id="app">
       <BrowserRouter>
-        <Top />
-        <hr/>
         <div id="content">
           <Routes>
-            <Route path="/" element={ <Home /> } />
-            <Route path="/about" element={ <About /> } />
-            <Route path="/auth" element={ <Auth /> } />
+            <Route element={ <LayoutStandard /> }>
+              <Route path="/" element={ <Home /> } />
+            </Route>
+            <Route element={ <LayoutSimple /> }>
+              <Route path="/about" element={ <About /> } />
+              <Route path="/auth" element={ <Auth /> } />
+            </Route>
           </Routes>
         </div>
-        <hr />
-        <Footer />
       </BrowserRouter>
     </div>
   )
