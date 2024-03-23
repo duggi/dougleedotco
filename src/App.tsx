@@ -15,19 +15,17 @@ import LayoutSimple from 'layouts/LayoutSimple';
 
 function App() {
   return (
-    <div id="app">
+    <div id="app" className="container h-lvh mx-auto bg-white">
       <BrowserRouter>
-        <div id="content">
-          <Routes>
-            <Route element={ <LayoutStandard /> }>
-              <Route path="/" element={ <Home /> } />
-            </Route>
-            <Route element={ <LayoutSimple /> }>
-              <Route path="/about" element={ <About /> } />
-              <Route path="/auth" element={ <Auth /> } />
-            </Route>
-          </Routes>
-        </div>
+        <Routes>
+          <Route element={ <LayoutStandard /> }>
+            <Route path="/" element={ <Home /> } />
+            <Route path="/about" element={ <About /> } />
+          </Route>
+          <Route element={ <LayoutSimple /> }>
+            <Route path="/auth" element={ <Auth /> } />
+          </Route>
+        </Routes>
       </BrowserRouter>
     </div>
   )

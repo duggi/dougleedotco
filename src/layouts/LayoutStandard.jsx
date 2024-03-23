@@ -5,30 +5,40 @@ import Footer from 'components/shared/Footer';
 
 
 
-
 const LayoutStandard = () => {
   return (
-    <div>
-      <Top />
-      <hr/>
-      <div>
-        LeftNav
+    <>
+      <div className="grid main-grid lg:mx-auto">
+        <Top />
+        <div className="left-rail bg-green-100">
+          LeftRail
+        </div>
+        <div className="content bg-red-100">
+          <h1>Title Block of LayoutStandard</h1>
+          Content OUTLET
+          <Outlet />
+        </div>
+        <div className="right-rail bg-blue-100 p-6">
+          RightRail
+          <div className="card p-4 bg-white mb-4">
+            <h2>I am a card</h2>
+            <p>Lorem ipsum dolor amet</p>
+          </div>
+          <div className="card p-4 bg-white mb-4">
+            <h2>I am a card</h2>
+            <p>Lorem ipsum dolor amet</p>
+          </div>
+          <div className="card p-4 bg-white mb-4">
+            <h2>I am a card</h2>
+            <p>Lorem ipsum dolor amet</p>
+          </div>
+        </div>
+        <Footer />
       </div>
-      <div>
-        <h1>Title Block of LayoutStandard</h1>
-        OUTLET
-        <Outlet />
-      </div>
-      <div>
-        RightBar
-      </div>
-      <hr />
-      <Footer />
-    </div>
+    </>
   );
 }
 
 
 
 export default LayoutStandard;
-

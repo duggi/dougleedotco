@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function Top() {
   return (
-    <div id="navlinks">
+    <div className="top-rail">
       <h1>[TOP]</h1>
       <Link to="/">Home</Link>
       <Link to="/about">About</Link>
