@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 
 
-function Footer() {
+function Bottom() {
   return (
     <div className="bottom-rail">
       <h1>[FOOTER]</h1>
@@ -15,4 +15,4 @@ function Footer() {
 
 
 
-export default Footer;
+export default Bottom;

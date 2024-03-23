@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom';
 
-import Top from 'components/shared/Top';
-import Footer from 'components/shared/Footer';
+import Top from 'layouts/shared/Top';
+import Bottom from 'layouts/shared/Bottom';
 
 
 
@@ -33,7 +33,7 @@ const LayoutStandard = () => {
             <p>Lorem ipsum dolor amet</p>
           </div>
         </div>
-        <Footer />
+        <Bottom />
       </div>
     </>
   );

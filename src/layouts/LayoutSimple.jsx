@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom';
 
-import Top from 'components/shared/Top';
-import Footer from 'components/shared/Footer';
+import Top from 'layouts/shared/Top';
+import Bottom from 'layouts/shared/Bottom';
 
 
 
@@ -15,7 +15,7 @@ const LayoutSimple = () => {
         <Outlet />
       </div>
       <hr />
-      <Footer />
+      <Bottom />
     </div>
   );
 }
